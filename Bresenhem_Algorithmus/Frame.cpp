@@ -8,6 +8,22 @@ Frame::Frame() :
 			frm[i][j] = Frame::black;
 }
 
+Frame::Frame(const Frame* other)
+{
+	this->frm = other->frm;
+}
+
+Frame& Frame::operator=(const Frame& other)
+{
+	if (this == &other)
+		return *this;
+
+	for (int i{}; i < high; ++i)
+		for (int j{}; j < wide; ++j)
+			this->frm[i][j] = other.frm[i][j];
+	return *this;
+}
+
 void Frame::reset()
 {
 	for (int i{}; i < high; ++i)

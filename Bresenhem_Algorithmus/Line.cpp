@@ -36,12 +36,8 @@ void Line::draw(Frame* frm)//const;										// mit const geht es aber nicht, da
 		deltaY *= -1;
 
 	if (deltaY > deltaX)
-		error = deltaY / 2;
-	else
-		error = deltaX / 2;
-
-	if (deltaY > deltaX)
 	{
+		error = deltaY / 2;
 		while (start_x != end_x || start_y != end_y + 1)
 		{
 			frm->put_point(start_x, start_y);
@@ -56,6 +52,7 @@ void Line::draw(Frame* frm)//const;										// mit const geht es aber nicht, da
 	}
 	else
 	{
+		error = deltaX / 2;
 		while (start_x != end_x + 1 || start_y != end_y)
 		{
 			frm->put_point(start_x, start_y);

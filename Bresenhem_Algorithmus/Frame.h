@@ -11,6 +11,9 @@ class Frame
 public:
 	enum color { black = ' ', white = '*' };
 	Frame();
+	Frame(const Frame*);							//Kopier-Konstruktor
+	Frame& operator=(const Frame&);					//Zuweisungsoperator
+
 	friend std::ostream& operator<<(std::ostream&, const Frame&);
 	void reset();											// Frame leeren
 	void put_point(int, int);								// Punkt im Frame speichern
