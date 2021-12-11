@@ -22,6 +22,9 @@ void Triangle::fehlendePunkte()
 	int h{};
 	h = sqrt(pow(len3, 2) - pow(z, 2));
 
+	if ((len2 + len3) < len1)
+		throw std::exception("len2 + len3 kann nicht kleine als len1 sein");
+
 	spitze_x = start_x - h;
 	spitze_y = start_y + z;
 }
