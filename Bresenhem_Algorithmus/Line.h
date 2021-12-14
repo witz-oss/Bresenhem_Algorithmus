@@ -11,7 +11,7 @@ public:
 	Line(int, int, int, int);
 	//~Line();							// он типа нужен ведь ??
 	void set(int, int, int, int);
-	void draw(Frame*);//const;
+	void draw(Frame*)const;//const;
 	void move(int, int);
 private:
 	int start_x{};

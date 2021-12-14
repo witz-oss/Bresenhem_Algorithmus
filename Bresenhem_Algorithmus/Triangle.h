@@ -9,7 +9,7 @@ public:
 	Triangle(int, int, int, int, int);						// start_x, start_y, len1, len2, len3
 	//~Triangle();
 	void fehlendePunkte();
-	void draw(Frame*);
+	void draw(Frame*)const;
 	void move(int, int);
 private:
 	int start_x{};

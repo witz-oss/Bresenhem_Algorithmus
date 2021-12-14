@@ -10,14 +10,12 @@ Shape::Shape()
 
 void Shape::show_all_shapes(Frame* frm)
 {
-
-	frm->showCoutPut();
-
-	//while (last != nullptr)
-	//{
-		//frm->reset();
-		//last->draw(frm);
-		//frm->showCoutPut();
-		//last = last->prev;
-	//}
+	while (last != nullptr)
+	{
+		frm->reset();
+		last->draw(frm);
+		frm->show();
+		last = last->prev;
+	}
 }
+

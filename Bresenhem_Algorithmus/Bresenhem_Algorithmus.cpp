@@ -17,37 +17,37 @@ int main()try
 
     auto firstStart = std::chrono::high_resolution_clock::now();                     // high_resolution_clock::time_point
 
-    Line line1(20, 5, 5, 30);                                                        // start_x, start_y, end_x, end_y
-    line1.draw(&frm1);
-    //frm.show();
+    Line* line1{ new Line (20, 5, 5, 30) };                                                        // start_x, start_y, end_x, end_y
+    //line1->draw(&frm1);
+    //frm1.show();
     //frm.reset();
 
     auto firstEnd = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> firstDiff = firstEnd - firstStart;
-    std::cout << "first - " << firstDiff.count() << '\n';
+    //std::cout << "first - " << firstDiff.count() << '\n';
 
     //  =============================================================================================================================  //
 
     auto secondStart = std::chrono::high_resolution_clock::now();
 
-    Line line2(5, 5, 20, 30);                                                         // start_x, start_y, end_x, end_y
-    line2.draw(&frm2);
-    //frm.showCoutPut();
+    Line* line2{ new Line (5, 5, 20, 30) };                                                         // start_x, start_y, end_x, end_y
+    //line2.draw(&frm2);
+    //frm2.showCoutPut();
     //frm.reset();
 
     auto secondEnd = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> secondDiff = secondEnd - secondStart;
-    std::cout << "first - " << secondDiff.count() << '\n';
+    //std::cout << "first - " << secondDiff.count() << '\n';
     // std::cout.put() ist schneller auf 15-20%
 
     //  =============================================================================================================================  //
 
     Triangle triangle1(15, 5, 20, 13, 9);                                            // start_x, start_y, len1, len2, len3
-    triangle1.draw(&frm3);
+    //triangle1.draw(&frm3);
     //frm3.showCoutPut();
     //frm.reset();
 
-    triangle1.show_all_shapes(&frm4);
+    line1->show_all_shapes(&frm4);
 
     return 0;
 }

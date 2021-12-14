@@ -12,6 +12,8 @@ Triangle::Triangle(int start_x, int start_y, int len1, int len2, int len3)
 	}
 	else
 		throw std::runtime_error("die Lenge der Seiten nicht stimmen !!!!");
+
+	fehlendePunkte();
 }
 
 void Triangle::fehlendePunkte()
@@ -29,19 +31,16 @@ void Triangle::fehlendePunkte()
 	spitze_y = start_y + z;
 }
 
-void Triangle::draw(Frame* frm)
+void Triangle::draw(Frame* frm)const
 {
-	fehlendePunkte();
+	int drawY{ start_y };
 
 	Line line1(start_x, start_y, spitze_x, spitze_y);
 	line1.draw(frm);
-	while (start_y != end_y)
-	{
-		frm->put_point(start_x, start_y);
-		start_y++;
-	}
-	Line line2(spitze_x, spitze_y, start_x, end_y);
+	Line line2(start_x, start_y, start_x, end_y);
 	line2.draw(frm);
+	Line line3(spitze_x, spitze_y, start_x, end_y);
+	line3.draw(frm);
 }
 
 void Triangle::move(int h, int l)
