@@ -33,8 +33,6 @@ void Triangle::fehlendePunkte()
 
 void Triangle::draw(Frame* frm)const
 {
-	int drawY{ start_y };
-
 	Line line1(start_x, start_y, spitze_x, spitze_y);
 	line1.draw(frm);
 	Line line2(start_x, start_y, start_x, end_y);
