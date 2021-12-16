@@ -29,6 +29,8 @@ void Triangle::fehlendePunkte()
 
 	spitze_x = start_x - h;
 	spitze_y = start_y + z;
+
+	return;
 }
 
 void Triangle::draw(Frame* frm)const
@@ -39,10 +41,14 @@ void Triangle::draw(Frame* frm)const
 	line2.draw(frm);
 	Line line3(spitze_x, spitze_y, start_x, end_y);
 	line3.draw(frm);
+
+	return;
 }
 
 void Triangle::move(int h, int l)
 {
 	this->start_x += h;
 	this->start_y += l;
+
+	return;
 }

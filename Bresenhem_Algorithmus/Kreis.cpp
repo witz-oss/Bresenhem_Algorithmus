@@ -66,10 +66,13 @@ void Kreis::draw(Frame* frm)const
 		frm->put_point(topX, permYmn);		// 4/4	
 	}
 	//  vlt 1/8 wäre besser
+	return;
 }
 
 void Kreis::move(int h, int l)
 {
 	this->start_x += h;
 	this->start_y += l;
+
+	return;
 }

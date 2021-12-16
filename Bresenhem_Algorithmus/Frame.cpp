@@ -29,6 +29,7 @@ void Frame::reset()
 	for (int i{}; i < high; ++i)
 		for (int j{}; j < wide; ++j)
 			frm[i][j] = Frame::black;
+	return;
 }
 
 void Frame::put_point(int pWide, int pHigh)
@@ -37,11 +38,15 @@ void Frame::put_point(int pWide, int pHigh)
 		frm[pWide][pHigh] = Frame::white;
 	else
 		throw std::runtime_error("ausser Matrix");
+
+	return;
 }
 
 void Frame::show() const
 {
 	std::cout << *this;
+
+	return;
 }
 
 void Frame::showCoutPut() const
@@ -57,6 +62,8 @@ void Frame::showCoutPut() const
 		}
 		std::cout << std::endl;
 	}
+
+	return;
 }
 
 bool Frame::on_frame(int x, int y) const

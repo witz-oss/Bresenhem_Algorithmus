@@ -20,5 +20,14 @@ void Shape::show_all_shapes(Frame* frm)
 		last = lastP;			
 		last = last->prev;
 	}
+
+	//for (Shape* p{ last }; p != nullptr; p = p->prev)
+	//{
+		//p->draw(frm);
+		//frm->show();
+		//frm->reset();
+	//}
+
+	return;
 }
 

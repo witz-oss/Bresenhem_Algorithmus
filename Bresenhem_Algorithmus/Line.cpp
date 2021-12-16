@@ -21,6 +21,8 @@ void Line::set(int start_x, int start_y, int end_x, int end_y)
 	this->start_y = start_y;					
 	this->end_x = end_x;
 	this->end_y = end_y;
+
+	return;
 }
 
 void Line::draw(Frame* frm)const										
@@ -68,6 +70,8 @@ void Line::draw(Frame* frm)const
 			}
 		}
 	}
+
+	return;
 }
 
 void Line::move(int h, int v)
@@ -76,6 +80,8 @@ void Line::move(int h, int v)
 	end_x += h;
 	start_y += v;
 	end_y += v;
+
+	return;
 }
 
 
